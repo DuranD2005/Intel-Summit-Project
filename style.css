@@ -85,6 +85,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 5px 24px rgba(0, 60, 116, 0.07);
   text-align: center;
+  align-items: center;
 }
 
 /* Check-in form */
@@ -99,6 +100,7 @@ body {
 
 .form-group {
   display: flex;
+  flex-direction: column;
   gap: 15px;
   width: 100%;
 }
@@ -139,6 +141,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
 button:hover {
@@ -342,6 +345,71 @@ select {
   color: #475569;
 }
 
+/* Attendee List */
+.attendee-list {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f1f5f9;
+}
+
+.attendee-list h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#attendeeListContainer {
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  padding: 15px;
+}
+
+.attendee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.attendee-item.water {
+  border-left-color: #0ea5e9;
+}
+
+.attendee-item.zero {
+  border-left-color: #10b981;
+}
+
+.attendee-item.power {
+  border-left-color: #f59e0b;
+}
+
+.attendee-name {
+  font-weight: 500;
+  color: #374151;
+  font-size: 15px;
+}
+
+.attendee-team {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.no-attendees {
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -355,6 +423,10 @@ select {
     margin: 0 15px 30px;
   }
 
+  #check-inForm {
+    padding: 20px;
+  }
+
   .form-group {
     flex-direction: column;
   }
@@ -366,6 +438,7 @@ select {
 
   button {
     height: 50px;
+    align-self: stretch;
   }
 
   .input-wrapper {
